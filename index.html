@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./padrao.css">
+    <link rel="shortcut icon" href="./assests/favicon.png" type='image/.png'>
+    <title>Controle financeiro</title>
+</head>
+
+<body>
+    <div class="intro">
+        <h1>Controle seu Dinheiro!</h1>
+        <p>Liste tudo que entra e sai da sua conta e tenha mais controle financeiro na sua vida !</p>
+        <img src="./assests/undraw_Investment_data_re_sh9x.svg" alt="">
+    </div>
+    <div class="container">
+        <header>
+            <h1 class="total">Total:</h1>
+            <div class="amount" id='amount'></div>
+        </header>
+        <section class='historic-container'>
+            <p class="historic-title">Histórico:</p>
+            <button class='clear' onclick='removeAll()'>Limpar</button>
+            <div class="historic" id="historic"></div>
+        </section>
+        <section class="inputs" id="inputs">
+            <div class="inputsAreas">
+                <input value='teste' type="text" id='name' placeholder='Nome' autocomplete='off'>
+                <input value='12' type='number' id='value' placeholder='Valor'>
+            </div>
+            <button class='btn-add' id='btn-add'>ADICIONAR</button>
+        </section>
+    </div>
+
+    <footer>
+        <a href="https://github.com/gabriel-santi" target='_blank'>
+            <img src="./assests/github.png" alt="" class='social'>
+        </a>
+        <a href="https://www.linkedin.com/in/gabriel-santiago-b680a5206/" target="_blank">
+            <img src="./assests/linkedin.png" alt="" class='social'>
+        </a>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
