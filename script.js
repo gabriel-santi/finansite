@@ -79,14 +79,22 @@ function getValues() {
     let value = document.getElementById('value').value
     value = parseFloat(value)
 
-    value && name ?
-        addToStorage(name, value)
-        :
-        alert('Preencha os campos com valores válidos!')
-
+    validateInputs(name, value)
 
     document.getElementById('name').value = ''
     document.getElementById('value').value = ''
 }
+
+function validateInputs(name, value) {
+    let popup = document.querySelector('.alert-error')
+
+    if (!isNaN(value) && name != '') {
+        popup.style.display = 'none'
+        addToStorage(name, value)
+    } else {
+        popup.style.display = 'flex'
+    }
+}
+
 
 btn.addEventListener('click', getValues)
